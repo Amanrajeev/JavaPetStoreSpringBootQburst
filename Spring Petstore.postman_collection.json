@@ -1,0 +1,255 @@
+{
+	"info": {
+		"_postman_id": "a8c760d8-56c1-4907-95e7-6605aaed834e",
+		"name": "Spring Petstore",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "user",
+			"item": [
+				{
+					"name": "Create new user",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "qburst123",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "Amanrajeev",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n        \"userName\":\"Amanrajeev2\",\n        \"firstName\": \"Amal2\",\n        \"lastName\": \"Rajeev\",\n        \"email\": \"amal@gmail.com\",\n        \"password\": \"qburst123\",\n        \"phone\": \"+91 9567168961\",\n        \"userStatus\": 1\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/petstore/user",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"petstore",
+								"user"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get user by username",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "qburst123",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "Amanrajeev",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/petstore/user/Amanrajeev2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"petstore",
+								"user",
+								"Amanrajeev2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete User by username",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/petstore/user/Amanrajeev2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"petstore",
+								"user",
+								"Amanrajeev2"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Pet",
+			"item": [
+				{
+					"name": "Get pet by id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/PetStore/pet/2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"PetStore",
+								"pet",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create new pet",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n        \"name\": \"cat\",\n        \"category\": {\n            \"id\": 2\n        },\n        \"tags\": [\n            {\n\n                \"name\": \"cute\"\n            },\n            {\n\n                \"name\": \"adorable\"\n            }\n        ],\n        \"photoUrls\": [\n            \"persian1.jpg\",\n            \"persian2.jpeg\"\n        ],\n        \"status\": \"pending\"\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/PetStore/pet",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"PetStore",
+								"pet"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get All pets",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/PetStore/pet",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"PetStore",
+								"pet"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update pet",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "qburst123",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "Amanrajeev",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n        \"id\": 2,\n        \"name\": \"cat\",\n        \"category\": {\n            \"id\": 2\n        },\n        \"tags\": [\n            {\n\n                \"name\": \"cute\"\n            },\n            {\n\n                \"name\": \"adorable\"\n            }\n        ],\n        \"photoUrls\": [\n            \"persian1.jpg\",\n            \"persian2.jpeg\"\n        ],\n        \"status\": \"pending\"\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/PetStore/pet",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"PetStore",
+								"pet"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete pet by Id",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/PetStore/pet/3",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"PetStore",
+								"pet",
+								"3"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
